@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Answer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1>Answer</h1>
+    </header>
+
+    <main>
+        {% if answer %}
+            <section>
+                <h2>Answer (Source: {{ source }})</h2>
+                <p>{{ answer }}</p>
+            </section>
+        {% endif %}
+        
+        {% if results %}
+            <section>
+                <h2>Helpful Google Links:</h2>
+                <ul>
+                    {% for result in results %}
+                        <li>
+                            <a href="{{ result.link }}" target="_blank">{{ result.title }}</a><br>
+                            <small>{{ result.snippet }}</small>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </section>
+        {% endif %}
+        
+        <a href="{{ url_for('index') }}" class="back-link">Back</a>
+    </main>
+
+</body>
+</html>

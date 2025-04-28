@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with PDF</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Ask a Question from your PDF</h1>
+
+        <form id="question-form" action="/ask" method="post">
+            <input type="text" name="question" placeholder="Type your question here" required>
+            <button type="submit">Ask</button>
+        </form>
+
+        <div id="loading" style="display:none;">
+            <div class="spinner"></div>
+            <p>Finding the best answer...</p>
+        </div>
+
+        <div class="buttons">
+            <a href="{{ url_for('index') }}" class="button upload">Upload New PDF</a>
+            <a href="{{ url_for('reset') }}" class="button reset">Reset Chat</a>
+        </div>
+
+        <h2>PDF Preview (First Chunk)</h2>
+        {% if chunks %}
+            <pre>{{ chunks[0] }}</pre>
+        {% else %}
+            <p>No PDF uploaded yet.</p>
+        {% endif %}
+    </div>
+
+    <script>
+        const form = document.getElementById('question-form');
+        form.addEventListener('submit', function() {
+            document.getElementById('loading').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
