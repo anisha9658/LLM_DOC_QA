@@ -17,21 +17,24 @@ It also uses Google Search for external queries when answers are not found insid
 🏗️ Project Structure
 bash
 Copy code
+
 LLM_DOC_QA/
 ├── app/
-│   ├── static/        # Static files (CSS, JS)
-│   ├── templates/     # HTML templates
-│   ├── uploads/       # Uploaded documents
-├── project_venv/      # Virtual environment (excluded from git)
-├── Dockerfile         # Docker configuration
-├── education_sample.pdf # Sample document for testing
-├── google_search.py   # Handles external search using Google API
-├── llm_search.py      # Handles LLM document-based searching
-├── main.py            # Main Flask application
-├── utils.py           # Helper functions
-├── requirements.txt   # Python dependencies
-├── .gitignore         # Files and folders to be ignored in git
-├── README.md          # Project documentation (this file)
+│   ├── static/        
+│   ├── templates/     
+│   ├── uploads/       
+├── project_venv/      
+├── Dockerfile         
+├── education_sample.pdf 
+├── google_search.py   
+├── llm_search.py      
+├── main.py            
+├── utils.py           
+├── requirements.txt   
+├── .gitignore         
+├── README.md          
+
+
 🚀 How to Run Locally
 Clone the repository
 
