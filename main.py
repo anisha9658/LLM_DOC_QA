@@ -5,8 +5,8 @@ from utils import extract_text_from_pdf, chunk_text, search_in_chunks
 from google_search import google_search
 from llm_search import query_openai_api
 
-GOOGLE_API_KEY = "AIzaSyCfgMAaDgDlCE0QIa1nKQXtyCZO-b1rztk"
-GOOGLE_CSE_ID = "808eb63a5a8424930"
+GOOGLE_API_KEY = ""
+GOOGLE_CSE_ID = ""
 
 
 app = Flask(__name__, template_folder='app/templates', static_folder='app/static')
