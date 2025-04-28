@@ -19,16 +19,13 @@ bash
 Copy code
 
 LLM_DOC_QA/
-
 ├── app/
-
 │   ├── static/        
 │   ├── templates/     
 │   ├── uploads/       
 ├── project_venv/      
 ├── Dockerfile         
 ├── education_sample.pdf 
-
 ├── google_search.py   
 ├── llm_search.py      
 ├── main.py            
